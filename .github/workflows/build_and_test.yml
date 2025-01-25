@@ -1,17 +1,20 @@
 name : build and test 
-on: push
-branches: {main}
+on:
+push
+ branches: 
+    - main
 pull request: 
  branches: {main}
-job:
-build:
-run on : ubantu latest 
-strategy:
-node version: {18x}
-steps:
- uses: action/checkout@v4
- name: use node.js ${{ matrix.node-version }}
- uses: actions/setup-node@v4
- with:
-  node-version:  ${{ matrix.node-version }}
+jobs:
+ build:
+ run on : ubantu latest 
+ strategy:
+ matrix: 
+  node version: {18x}
+ steps:
+  - uses: action/checkout@v4
+  - name: use node.js ${{ matrix.node-version }}
+    uses: actions/setup-node@v4
+    with:
+     node-version:  ${{ matrix.node-version }}
   
