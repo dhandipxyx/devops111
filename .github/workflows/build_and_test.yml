@@ -7,7 +7,7 @@ job:
 build:
 run on : ubantu latest 
 strategy:
-node version {18x}
+node version: {18x}
 step:
 uses: action/checkout@v4
 name: use node.js{matrix.node-version}
