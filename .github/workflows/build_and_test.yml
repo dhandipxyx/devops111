@@ -10,6 +10,6 @@ strategy:
 node version: {18x}
 step:
 uses: action/checkout@v4
-name: use node.js{matrix.node-version}
+name: use node.js ${{ matrix.node-version }}
 uses: action setup node@v4
 with:
