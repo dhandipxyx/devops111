@@ -2,7 +2,7 @@ name : build and test
 on: push
 branches: {main}
 pull request: 
-branches:{main}
+branches: {main}
 job:
 build:
 run on : ubantu latest 
